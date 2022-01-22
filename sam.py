@@ -11,7 +11,6 @@ from info import API_ID
 from info import API_HASH
 from info import SESSION
 from info import ADMINS
-from info import TIME
 from info import GROUPS
 #=======================================================================
 
@@ -26,7 +25,7 @@ Sam = Client(
 @Sam.on_message(filters.group & filters.chat(GROUPS) & filters.all)
 async def deleter(bot: Client, cmd: Message):
          if cmd.from_user.id not in ADMINS:
-                  await slp(int(TIME))
+                  await slp(int(30))
                   await cmd.delete()
 
 #=======================================================================
